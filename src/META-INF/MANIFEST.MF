@@ -1,0 +1,19 @@
+Name: STATS OUTPUT ATTRS
+Dialog-Specs: STATS_OUTPUT_ATTRS.spd
+Command-Specs: STATS_OUTPUT_ATTRS.xml
+Code-Files: STATS_OUTPUT_ATTRS.py
+Misc-Files: markdown.html,extsyntax.css,IBMdialogicon.png
+Summary: Set Viewer page attributes and setup via syntax
+Description: This command sets various attributes that apply to printi
+ ng and exporting of the Viewer contents. These include header and foo
+ ter text, page margins and orientation, starting page number, and spa
+ cing between output objects. All of these attributes can be set inter
+ actively using the Page Attributes and Page Setup dialogs on the View
+ er File menu.  This dialog can generate syntax to allow these attribu
+ tes to be set in batch or production jobs.
+Author: JKP, IBM SPSS
+Version: 1.1.6
+Product-Version: 18
+Date: 1/2/2014
+Plugins: Python
+Translation-Catalogues: lang
