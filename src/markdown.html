@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>STATS OUTPUT ATTRS Extension Command</title>
+
+<link rel="stylesheet" type="text/css" href="extsyntax.css" />
+
+
+
+
+
+</head>
+
+<body>
+<h1>STATS OUTPUT ATTRS Extension Command</h1>
+
+<p>Set options for printed or exported output.  It has no effect on
+the display in the Viewer.</p>
+<div class="syntax">
+<p>STATS OUTPUT ATTRS<br/>
+HEADER =&ldquo;<em>header text</em>&rdquo;<br/>
+FOOTER = &ldquo;<em>footer text</em>&rdquo;<br/>
+MARGINS = <em>left right top bottom</em><br/>
+ORIENTATION = PORTRAIT or LANDSCAPE<br/>
+PAGENUMBER = <em>number</em><br/>
+ITEMSPACING = <em>number</em></p>
+
+<p>/HELP</p>
+
+<p><sup>&#42;</sup> Required<br/>
+<sup>&#42;&#42;</sup> Default</p>
+</div>
+<p>STATS OUTPUT ATTRS /HELP displays this help and does nothing else.</p>
+
+
+<pre class="example"><code>STATS OUTPUT ATTRS HEADER=&quot;My Header Text&quot; ORIENTATION=LANDSCAPE.
+</code></pre>
+
+<p>Using html markup:</p>
+
+<pre class="example"><code>stats output attrs header=&quot;&lt;html&gt;My &lt;b&gt;Header&lt;/b&gt;&lt;br&gt;Text&lt;/html&gt;&quot;.
+</code></pre>
+
+<p><strong>HEADER</strong> and <strong>FOOTER</strong> text specify text for the page header and footer for printed
+or exported output.  It can be a single quoted string of text or multiple strings, e.g.<br/>
+<code>HEADER=&quot;first line of header&quot; &quot;second line&quot;</code>.  </p>
+
+<p>You can include the same special
+notation as appears in the Page Attributes dialog box.  For example, including
+<code>&amp;[Date]</code> inserts the current date in the header.  See the help for that dialog box for details.</p>
+
+<p>The text can be plain text or html.  If the first item starts with <em>&lt;html</em>, it is considered
+to be html.
+Be sure to close the last line with <em></html></em>.
+If it is not plain text, multiple strings are joined without any break or other separator.
+Use appropriate markup such as <em><br></em> for html to specify line breaking.</p>
+
+<p><strong>MARGINS</strong> specify the page margins.  If this keyword is used, there must be 
+four numbers for the left, right, top, and bottom margins, respectively.<br/>
+Margins are measured in points (72 pts = 1 inch), and the values must be 
+integers.  To leave a value at its current setting, enter a negative integer.
+Margins refer to the page in Portrait orientation.</p>
+
+<p><strong>ORIENTATION</strong> can set the page orientation to be portrait or landscape.</p>
+
+<p><strong>PAGENUMBER</strong> sets the starting page number.</p>
+
+<p><strong>ITEMSPACING</strong> sets the inter-item spacing distance.  It is measured in points and
+must be a nonnegative integer.</p>
+
+<p>&copy; Copyright IBM Corp. 1989, 2014</p>
+
+</body>
+
+</html>
+
