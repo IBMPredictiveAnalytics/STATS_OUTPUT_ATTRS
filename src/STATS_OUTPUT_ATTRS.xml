@@ -1,0 +1,24 @@
+<!-- ***************************************************************** -->
+<!--                                                                   -->
+<!-- Licensed Materials - Property of IBM                              -->
+<!--                                                                   -->
+<!-- IBM SPSS Products: Statistics Common                              -->
+<!--                                                                   -->
+<!-- (C) Copyright IBM Corp. 1989, 2011                                -->
+<!--                                                                   -->
+<!-- US Government Users Restricted Rights - Use, duplication or       -->
+<!-- disclosure restricted by GSA ADP Schedule Contract with IBM       -->
+<!-- Corp.                                                             -->
+<!--                                                                   -->
+<!-- ***************************************************************** -->
+<Command xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extension-1.0.xsd" Name="STATS OUTPUT ATTRS" Language="Python">
+	<Subcommand Name="" Occurrence="Optional">
+		<Parameter Name="HEADER" ParameterType="TokenList"/>
+		<Parameter Name="FOOTER" ParameterType="TokenList"/>
+		<Parameter Name="MARGINS" ParameterType="IntegerList"/>
+		<Parameter Name="ORIENTATION" ParameterType="Keyword"/>
+		<Parameter Name="PAGENUMBER" ParameterType="Integer"/>
+		<Parameter Name="ITEMSPACING" ParameterType="Integer"/>
+	</Subcommand>
+	<Subcommand Name="HELP" Occurrence="Optional"/>
+</Command>
