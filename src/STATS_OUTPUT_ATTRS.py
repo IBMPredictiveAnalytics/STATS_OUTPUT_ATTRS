@@ -3,7 +3,7 @@
 # *
 # * IBM SPSS Products: Statistics Common
 # *
-# * (C) Copyright IBM Corp. 1989, 2014
+# * (C) Copyright IBM Corp. 1989, 2020
 # *
 # * US Government Users Restricted Rights - Use, duplication or disclosure
 # * restricted by GSA ADP Schedule Contract with IBM Corp. 
@@ -100,7 +100,7 @@ def outputAttrs(header=None, footer=None, margins=None,
             if item:
                 item = [line for line in item if line]
                 item = "<br>".join(item)
-                item = item.encode("UTF-8", "replace")
+                #item = str(item.encode("UTF-8", "replace"))
                 api(item)
                 
         # page margins
@@ -136,7 +136,7 @@ def outputAttrs(header=None, footer=None, margins=None,
 def Run(args):
     """Execute the STATS OUTPUT ATTRS extension command"""
 
-    args = args[args.keys()[0]]
+    args = args[list(args.keys())[0]]
 
     oobj = Syntax([
         Template("HEADER", subc="",  ktype="literal", var="header", islist=True),
@@ -159,7 +159,7 @@ def Run(args):
         def _(msg):
             return msg
     # A HELP subcommand overrides all else
-    if args.has_key("HELP"):
+    if "HELP" in args:
         #print helptext
         helper()
     else:
@@ -179,7 +179,7 @@ def helper():
     # webbrowser.open seems not to work well
     browser = webbrowser.get()
     if not browser.open_new(helpspec):
-        print("Help file not found:" + helpspec)
+        print(("Help file not found:" + helpspec))
 try:    #override
     from extension import helper
 except:

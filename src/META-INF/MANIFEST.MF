@@ -2,7 +2,7 @@ Name: STATS OUTPUT ATTRS
 Dialog-Specs: STATS_OUTPUT_ATTRS.spd
 Command-Specs: STATS_OUTPUT_ATTRS.xml
 Code-Files: STATS_OUTPUT_ATTRS.py
-Misc-Files: markdown.html,extsyntax.css,IBMdialogicon.png
+Misc-Files: extsyntax.css,IBMdialogicon.png,markdown.html
 Summary: Set Viewer page attributes and setup via syntax
 Description: This command sets various attributes that apply to printi
  ng and exporting of the Viewer contents. These include header and foo
@@ -12,8 +12,10 @@ Description: This command sets various attributes that apply to printi
  er File menu.  This dialog can generate syntax to allow these attribu
  tes to be set in batch or production jobs.
 Author: JKP, IBM SPSS
-Version: 1.1.6
-Product-Version: 18
+Version: 2.1.6
+Product-Version: 24
 Date: 1/2/2014
+Product-Version-Maximum: 99
 Plugins: Python
+Python-Version: 3
 Translation-Catalogues: lang
