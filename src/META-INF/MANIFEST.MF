@@ -1,4 +1,5 @@
 Name: STATS OUTPUT ATTRS
+Display-Name: Output Viewer Attributes
 Dialog-Specs: STATS_OUTPUT_ATTRS.spd
 Command-Specs: STATS_OUTPUT_ATTRS.xml
 Code-Files: STATS_OUTPUT_ATTRS.py
